@@ -1,4 +1,4 @@
-CFLAGS= -g -D_FILE_OFFSET_BITS=64
+CFLAGS= -g -D_FILE_OFFSET_BITS=64 -std=c90 -Wall
 CC= cc
 LIBWCS = libwcs/libwcs.a
 LIBS = $(LIBWCS) -lm

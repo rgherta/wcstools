@@ -470,7 +470,7 @@ char    *filepath;      /* Name of file to check */
     else if (stat (filepath, &statbuff))
         return (0);
     else {
-        if (S_ISDIR(statbuff.st_mode) && S_IFDIR)
+        if (S_ISDIR(statbuff.st_mode))
 	    return (2);
 	else
 	    return (1);

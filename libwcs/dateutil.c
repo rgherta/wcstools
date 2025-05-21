@@ -929,10 +929,10 @@ double	*time;	/* Time as hh.mmssxxxx (returned) */
 {
     time_t tsec;
     struct timeval tp;
-    struct timezone tzp;
+    /*struct timezone tzp;*/
     struct tm *ts;
 
-    gettimeofday (&tp,&tzp);
+    gettimeofday (&tp,NULL);
 
     tsec = tp.tv_sec;
     ts = localtime (&tsec);
@@ -973,11 +973,11 @@ lt2fd()
     time_t tsec;
     struct tm *ts;
     struct timeval tp;
-    struct timezone tzp;
+    /*struct timezone tzp;*/
     int month, day, year, hour, minute, second;
     char *isotime;
 
-    gettimeofday (&tp,&tzp);
+    gettimeofday (&tp,NULL);
     tsec = tp.tv_sec;
 
     ts = localtime (&tsec);
@@ -3302,10 +3302,10 @@ double	*time;	/* Time as hh.mmssxxxx (returned) */
 {
     time_t tsec;
     struct timeval tp;
-    struct timezone tzp;
+    /*struct timezone tzp;*/
     struct tm *ts;
 
-    gettimeofday (&tp,&tzp);
+    gettimeofday (&tp,NULL);
 
     tsec = tp.tv_sec;
     ts = gmtime (&tsec);
@@ -3359,11 +3359,11 @@ ut2fd()
     int year, month, day, hour, minute, second;
     time_t tsec;
     struct timeval tp;
-    struct timezone tzp;
+    /*struct timezone tzp;*/
     struct tm *ts;
     char *isotime;
 
-    gettimeofday (&tp,&tzp);
+    gettimeofday (&tp,NULL);
     tsec = tp.tv_sec;
     ts = gmtime (&tsec);
 

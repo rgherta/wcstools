@@ -976,7 +976,7 @@ FileINetParse(file, port, adrinet)
     memset(adrinet, 0, sizeof(struct sockaddr_in));
     adrinet->sin_family = AF_INET;
     adrinet->sin_port = htons(port);
-    memcpy(&adrinet->sin_addr, hp->h_addr, hp->h_length);
+    memcpy(&adrinet->sin_addr, hp->h_addr_list[0], hp->h_length);
 
     return type;
 }
